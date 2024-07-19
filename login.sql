@@ -1,0 +1,1 @@
+INSERT INTO `login` (`username`, `password`) VALUES ('Admin', 'Admin#1234');

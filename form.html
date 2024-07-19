@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="form_style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  </head>
+<body>
+ <div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1 class="text-dark mb-5">
+        Reservation Form
+      </h1>
+
+      <form onsubmit="sendMessage()">
+        <div class="mb-3">
+          <label for="name">Name</label>
+    
+          <input type="text" id="name" placeholder="Farhan" class="form-control shadow none" required>
+        </div>
+        <div class="mb-3">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="farhan33@mail.com" class="form-control shadow none" required>
+        </div>
+        <div class="mb-3">
+          <label for="name">Date</label>
+          <input type="text" id="date" placeholder="dd/mm/yyyy" class="form-control shadow none" required>
+        </div>
+        <div class="mb-3">
+          <label for="pax">Number of Guest</label>
+          <input type="text" id="pax" placeholder="#" class="form-control shadow none" required>
+        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=6287778288281&text=Halo%20Admin!%0ASaya%20Dinan%0AEmail%20dinan100%40gmail.com%0AIngin%20reservasi%20meja%20untuk%20tanggal%2015%2F08%2F2024%0ASebanyak%205%20Kursi" class="btn btn-primary px-4" type="submit">Reserve Now!</a>
+      </form>
+    </div>
+  </div>
+ </div>
+
+ <script src="script.js"></script>
+
+</body>
+</html>

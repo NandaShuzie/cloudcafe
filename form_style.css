@@ -1,0 +1,217 @@
+
+.popup-form {
+  display: none; /* Hidden by default */
+  position: fixed;
+  background: rgba(0, 0, 0, 0.4); /* Transparent white background */
+  border-radius: 50px; /* Rounded corners */
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 1); /* Subtle shadow for depth */
+  backdrop-filter: blur(20px); /* Background blur for glassmorphism */
+  transition: right 1s ease-in-out; /* Smooth transition for slide effect */
+  opacity: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000; /* Ensure it is above other content */
+  animation: popup-bg 1.5s ease-in-out;
+}
+
+@keyframes popup-bg {
+  0% {   
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+  50% {
+    background: rgba(0, 0, 0, 0.0);
+    backdrop-filter: blur(0px); /* Background blur for glassmorphism */
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(20px); /* Background blur for glassmorphism */
+  }
+}
+
+.popup-form .form-content {
+  background-color: rgba(22, 22, 22, 0.4); /* Slightly opaque white background */
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 900px;
+  height: 700px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  animation: popupani 1.5s ease-in-out;
+}
+
+@keyframes popupani {
+  0% {   
+    background-color: rgba(22, 22, 22, 1);
+    top: 200%;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+  }
+  50% {
+    background-color: rgba(22, 22, 22, 1);
+    top: -30%;
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+  }
+  100% {
+    background-color: rgba(22, 22, 22, 0.4);
+    top: 0;
+    border-radius: 40px;
+    width: 900px;
+    height: 700px;
+  }
+}
+
+
+@keyframes textani {
+  0% {   
+   opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+.mb-3 input,
+.mb-3 textarea {
+  width: 100%;
+  opacity: 1;
+  padding: 0; 
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 2px solid #ccc; 
+  font-family: 'Outfit', sans-serif;
+  color: #000000;
+  font-size: 22px;
+  background-color: transparent; 
+  line-height: 2; 
+  margin-top: 20px;
+  height: auto; 
+  resize: vertical; 
+  scrollbar-width: thin; 
+  scrollbar-color: #960032 rgba(0, 0, 0, 0.2); 
+  animation: textani 1.5s ease-in-out;
+}
+
+@keyframes textani {
+  0% {   
+   opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+.mb-3 textarea::-webkit-scrollbar {
+  width: 3px; /* Width of the scrollbar */
+}
+
+.mb-3 textarea::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2); /* Track color */
+}
+
+.mb-3 textarea::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Thumb color */
+  border-radius: 20px; /* Roundness of the thumb */
+}
+
+.mb-3 input:focus,
+.mb-3 textarea:focus {
+  border-bottom-color: #000000; /* Focus color change */
+  outline: none;
+  box-shadow: none; /* Remove box shadow */
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes textani2 {
+  0% {   
+   opacity: 0;
+   padding: 0px 70px;
+   padding-right: 95px;
+   border-radius: 0px 0px 0px 0px;
+  }
+  50% {
+    opacity: 0;
+    padding: 90px 70px;
+    padding-right: 95px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  75% {
+    padding: 90px 70px;
+    opacity: 1;
+    padding-right: 95px;
+    border-radius: 0px 0px 0px 0px;
+  }
+  100% {
+    padding: 20px 70px;
+  opacity: 1;
+  padding-right: 95px;
+  border-radius: 30px 0px 0px 30px;
+  }
+}
+
+
+@keyframes textani {
+  0% {   
+   opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+  opacity: 1;
+  }
+}
+
+.btn {
+  background: linear-gradient(135deg, #1d1d1d, #222222);
+
+border-radius: 4px;
+padding: 15px 30px;
+text-decoration: none;
+font-size: 1.2em;
+border: none;
+cursor: pointer;
+transition: 0.3s ease-in-out;  
+ }
+
+.btn:hover {
+  background: linear-gradient(135deg, #1d1d1d, #222222);
+}
+
+.btn:active {
+  transform: scale(1);
+}
+
+
+/* Optional: Add transition effects */
+.popup-form {
+  transition: all 2s ease-in-out;
+}
+
+.popup-form.show {
+  display: flex;
+}
